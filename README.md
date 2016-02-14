@@ -154,7 +154,7 @@
               <td>19</td>
               <td>Overlapping Rectangles Version 3<br> 
                   (Submit MyRect.java and OverlapRectanglesV3.java)</font></td> 
-               
+               <td>Completed</td>
                
             </tr>
             <tr>
