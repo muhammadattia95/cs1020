@@ -162,7 +162,7 @@
               <td>Redeem Coupon<br> 
                   (Submit Coupon.java and Redeem.java)</font></td> 
                
-               
+              <td>Completed</td> 
             </tr>
             <tr>
               <td>OOP and ArrayList</td> 
