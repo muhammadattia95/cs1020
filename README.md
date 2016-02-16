@@ -170,7 +170,8 @@
               <td>Turning Knobs<br> 
                   (Submit Knob.java and TurnKnobs.java)</font></td> 
                
-               
+            	<td>Completed</td>
+   
             </tr>
             <!-- Week 5 -->
             <tr>
