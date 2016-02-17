@@ -181,7 +181,8 @@
               <td>Circle with Centre<br> 
                   (Submit only CentredCircle.java)</font></td> 
                
-               
+              <td>Completed</td>
+
             </tr>
             <tr>
               <td>23</td>
