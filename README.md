@@ -189,7 +189,8 @@
               <td>Manage Animals<br> 
                   (Submit both Zoo.java and ManageAnimals.java)</font></td> 
                
-               
+               <td>Completed</td>
+
             </tr>
             <tr>
               <td rowspan="2">Exceptions</td> 
