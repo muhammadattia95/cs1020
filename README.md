@@ -205,7 +205,8 @@
               <td>Finding a Date<br>
                   (Submit TestMyDate.java, MyDate.java 
                                   and InvalidDateException.java)</font></td> 
-               
+               <td>Completed</td>
+
                
             </tr>
             <!-- Week 6 -->
