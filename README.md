@@ -197,7 +197,8 @@
               <td>24</td>
               <td>Finding a Root of a Quadratic Equation</td>
                
-               
+               <td>Completed</td>
+
             </tr>
             <tr>
               <td>25</td>
