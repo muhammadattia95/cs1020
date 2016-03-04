@@ -167,14 +167,9 @@ public class BasicLinkedList<E>{
 	}
 
 	public void logicalRemove(ListNode<E> target){
-		ListNode<E> curr = head;
-
-		while(curr.getNext() != null){
-			if(curr.getNext() == target && curr.getNext().getData().equals(target.getData())){
-				curr.setNext(target.getNext());
-				break;
-			}
-		}
+		target.setData(target.getNext().getData());
+		target.setNext(target.getNext().getNext());
+		size--;
 	}
 
 	// sorted merge
@@ -204,3 +199,4 @@ public class BasicLinkedList<E>{
 		return new BasicLinkedList<Integer>(newListHead);
 	}
 }
+
