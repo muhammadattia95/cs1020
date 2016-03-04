@@ -156,7 +156,8 @@ class CircularLinkedList<E>{
 					offset--;
 				}
 			}
-
+			
+			// special case when the pointer lands on dummy node or node with content
 			while(curr==dummy || curr.getData() != null){
 				if(curr == dummy){
 					curr = curr.getNext();
