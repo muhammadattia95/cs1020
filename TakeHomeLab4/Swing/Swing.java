@@ -43,19 +43,30 @@ public class Swing {
 
 		for(int i = 0; i< trees.length; i++){
 			//System.out.println("SSS: "+trees[0]);
+			// push the first tree
 			s.push(trees[i]);
+
+			// start tracing second tree...
 			for( int j = i+1; j< trees.length; j++){
 				if(trees[j] < s.peek()){
+					// if the subsequent tree is less than the on on top of the stack
+					// push it to the stack and inc result by 1
 					s.push(trees[j]);
 					result++;
 					System.out.println(result+": "+s);
 				}else{
+					// if the subsequent tree is equals or more than the top of the stack
+					// push it to the stack and inc result by 1
 					s.push(trees[j]);
 					result++;
 					System.out.println(result+": "+s);
+
+					// empty the stack
 					while(!s.isEmpty()){
 						s.pop();
 					}
+
+					// early break since the monkey cannot traverse to the next tree
 					break;
 				}
 			}
