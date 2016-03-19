@@ -23,7 +23,7 @@ public class BinaryWeight{
 			}else{
 				// search for right most "01"
 				//
-				System.out.println(num + getFlipFactor(num, -1, 0));
+				System.out.println(flipAndRightShift(num, -1, 0, num, 0, 0));
 			}
 		}
 	}
@@ -48,12 +48,24 @@ public class BinaryWeight{
 		}
 	}
 
-	private static int getFlipFactor(int num, int prevLSB, int factorSoFar){
+	private static int flipAndRightShift(int num, int prevLSB, int factorSoFar, int originalNum, int bitMask, int sumOfPrevLSBs){
 		int currLSB = getLSB(num);
 		if(prevLSB == 1 && currLSB == 0){
-			return factorSoFar;
+			/* 
+			 * eg: 110111000
+			 *
+			 * 1. calculate flip factor: 110111000 + 100000 (flip factor) = 111011000 
+			 * 2. right shift all bits before the position of '01' pattern: 111011000 - 11000 + 11 = 111000011
+			 * */
+			return originalNum + factorSoFar - sumOfPrevLSBs + removeTrailingZeros(sumOfPrevLSBs);
 		}else{
-			return getFlipFactor(num >> 1, currLSB, factorSoFar == 0? 1: (factorSoFar << 1));
+			return flipAndRightShift(
+					num >> 1, // left shift num
+					currLSB, // set currLSB as prevLSB for next recursive call
+					factorSoFar == 0? 1: (factorSoFar << 1), // flipping factor
+					originalNum, // original num (for final calculation)
+					(bitMask << 1)+1, // bit mask of 1s
+					(originalNum & bitMask));  // apply AND operation on the original number to copy all digits given current bitmask
 		}
 	}
 	
