@@ -24,7 +24,7 @@ public class Swing {
 			theTrees[i] = sc.nextInt();
 		}
 
-		sc.nextLine();
+		sc.nextLine(); // consume line fedd
 
 		Swing swing = new Swing(theTrees);
 
@@ -39,38 +39,48 @@ public class Swing {
 	private int calcPairCount(){
 		int result = 0;
 		Stack<Integer> s = new Stack<Integer>();
-		//System.out.println(s);
 
 		for(int i = 0; i< trees.length; i++){
-			//System.out.println("SSS: "+trees[0]);
-			// push the first tree
-			s.push(trees[i]);
-
-			// start tracing second tree...
-			for( int j = i+1; j< trees.length; j++){
-				if(trees[j] < s.peek()){
-					// if the subsequent tree is less than the on on top of the stack
-					// push it to the stack and inc result by 1
-					s.push(trees[j]);
+			if(s.isEmpty()){
+				s.push(trees[i]);
+				continue;
+			}else{
+				while(!s.isEmpty() && s.peek() < trees[i]){
+					/*
+					 *	if it's not empty, we need to check if the next tree
+					 *	is higher than the top of the stack
+					 *
+					 *	if so, we remove all descending trees except for the 
+					 *	last one which is higher or equal height of the next tree
+					 */
+					
+					// for each tree we pop, we increment counter, since these trees cannot
+					// traverse further, we forget them
 					result++;
-					System.out.println(result+": "+s);
-				}else{
-					// if the subsequent tree is equals or more than the top of the stack
-					// push it to the stack and inc result by 1
-					s.push(trees[j]);
+					//System.out.println(result + ": "+ s);
+					//s.pop();
+					s.pop();
+				}
+
+				if(s.isEmpty()){
+					// if the stack is empty, we push a new tree
+					// no count at this phase because it doesn't form a pair
+					s.push(trees[i]);
+					continue;
+				}else if(!s.isEmpty() && s.peek() > trees[i]){
+					// next tree is shorter than the top of the stack
+					// continue pushing
+					// increment counter
+					s.push(trees[i]);
 					result++;
-					System.out.println(result+": "+s);
-
-					// empty the stack
-					while(!s.isEmpty()){
-						s.pop();
-					}
-
-					// early break since the monkey cannot traverse to the next tree
-					break;
+				}else if(s.peek() == trees[i]){
+					// if the tree height is equal to the top of the stack
+					// we do not push, only increment the counter
+					result++;
 				}
 			}
-			System.out.println("=====");
+
+			//System.out.println(result+": "+s);
 		}
 
 		return result;
