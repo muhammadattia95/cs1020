@@ -249,55 +249,64 @@
             <!-- Week 8 -->
 
             <tr>
-              <td>31</td>
+             
               <td rowspan="5">10 March,<br>Tuesday</td>
-              <td rowspan="5">Stacks and Queues</td> 
+              <td rowspan="5">Stacks and Queues</td>
+			  <td>31</td>
               <td>Simple Exercise on Stack<br>
                   (Submit only StackExercise.java)</font></td> 
                
-               
+               <td>Completed</td>
+
             </tr>
             <tr>
               <td>32</td>
               <td>Simple Exercise on Queue<br>
                   (Submit only QueueExercise.java)</font></td> 
                
-               
+               <td>Completed</td>
+
             </tr>
             <tr>
               <td>33</td>
               <td>QuickEat Restaurant</td> 
                
-               
+               <td>Completed</td>
+
             </tr>
             <tr>
               <td>34</td>
               <td>Web Browser History</td> 
                
-               
+               <td>Completed</td>
+
             </tr>
             <tr>
               <td>35</td>
               <td>Simple Parser</td> 
                
-               
+               <td>Completed</td>
+
             </tr>
 
             <!-- Week 9 -->
 
             <tr>
-              <td>36</td>
+             
               <td rowspan="5">17 March,<br>Tuesday</td>
-              <td rowspan="5">Recursion</td> 
+              <td rowspan="5">Recursion</td>
+			  <td>36</td>
               <td>North-East Paths</td> 
                
-               
+               <td>Completed</td>
+
             </tr>
             <tr>
               <td>37</td>
               <td>Palindromes</td> 
                
-               
+               <td>Completed</td>
+
             </tr>
             <tr>
               <td>38</td>
