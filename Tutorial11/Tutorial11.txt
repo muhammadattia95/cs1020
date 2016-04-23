@@ -1,0 +1,13 @@
+1
+a. NOPE. even number
+b. NOPE. only 7 slots are used
+c. NOPE. a lot of collisions.
+d. NOPE. goes crazy because of second hash function
+e. NOPE. last few chars of email most likely the same. a lot of collision
+f. NOPE. might not get back the original value/key. Non-deterministic.
+
+3. # of comparison: summation, i=0 -> N , 2^i x log 
+
+4. # of comparison for hashtable:
+
+(511/p)(511/p+1)/2 * p
