@@ -1,0 +1,15 @@
+CS1020-2012/13-S2
+=================
+1. E 776
+2. C
+3. D
+4. OMG
+5. E
+				In-place?	Stable?
+	Selection 	yes			no (can be implemented stable)
+	Merge		no			yes
+	Quick		yes			no
+	Radix		no			yes
+6. B
+7. C
+8. A
